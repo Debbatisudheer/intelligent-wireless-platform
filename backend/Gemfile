@@ -1,0 +1,64 @@
+source "https://rubygems.org"
+
+# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+gem "rails", "~> 8.1.4"
+
+# Use PostgreSQL as the database for Active Record
+gem "pg", "~> 1.1"
+
+# Use the Puma web server
+gem "puma", ">= 5.0"
+
+# Build JSON APIs with ease
+# gem "jbuilder"
+
+# Use Active Model has_secure_password
+# gem "bcrypt", "~> 3.1.7"
+
+# Windows does not include zoneinfo files
+gem "tzinfo-data", platforms: %i[ windows jruby ]
+
+# Rails database-backed adapters
+gem "solid_cache"
+gem "solid_queue"
+gem "solid_cable"
+
+# Reduces boot times through caching
+gem "bootsnap", require: false
+
+# Deploy this application anywhere as a Docker container
+gem "kamal", require: false
+
+# HTTP asset caching/compression
+gem "thruster", require: false
+
+# Use Active Storage variants
+gem "image_processing", "~> 1.2"
+
+# Cross-Origin Resource Sharing for React frontend ↔ Rails API
+gem "rack-cors"
+
+# Background job processing
+gem "sidekiq"
+
+group :development, :test do
+  # RSpec testing framework
+  gem "rspec-rails"
+
+  # Debugging
+  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+
+  # Audits gems for known security defects
+  gem "bundler-audit", require: false
+
+  # Static analysis for security vulnerabilities
+  gem "brakeman", require: false
+
+  # Ruby code quality and style
+  gem "rubocop-rails-omakase", require: false
+end
+gem "redis", "~> 5.4"
+
+gem "rubocop", "~> 1.92", group: :development
+
+gem "rubocop-rails", "~> 2.38", group: :development

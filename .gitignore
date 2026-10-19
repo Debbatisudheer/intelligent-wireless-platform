@@ -1,0 +1,121 @@
+# ================================
+# OS / Editor
+# ================================
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ================================
+# Environment / Secrets
+# ================================
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+*.crt
+
+# ================================
+# Rails
+# ================================
+
+backend/log/*
+backend/tmp/*
+backend/storage/*
+backend/.bundle/
+
+# Keep required Rails storage structure if needed
+!backend/storage/.keep
+
+# Rails credentials / secrets
+backend/config/master.key
+backend/config/credentials/*.key
+
+# ================================
+# Ruby / Bundler
+# ================================
+
+**/.bundle/
+*.gem
+
+# ================================
+# Rails test / coverage
+# ================================
+
+backend/coverage/
+backend/.rspec_status
+
+# ================================
+# Node / React / Vite
+# ================================
+
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# npm
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# ================================
+# Cypress
+# ================================
+
+frontend/cypress/screenshots/
+frontend/cypress/videos/
+frontend/cypress/downloads/
+
+# ================================
+# TypeScript
+# ================================
+
+frontend/*.tsbuildinfo
+frontend/**/tsconfig.tsbuildinfo
+
+# ================================
+# Build / temporary files
+# ================================
+
+*.tmp
+*.temp
+*.log
+
+# ================================
+# Database dumps
+# ================================
+
+*.sql
+*.dump
+*.bak
+
+# ================================
+# Local development files
+# ================================
+
+backend/.ruby-version
+backend/.ruby-gemset
+
+# ================================
+# Windows
+# ================================
+
+*.stackdump
+Desktop.ini
+$RECYCLE.BIN/
+
+# ================================
+# Project-specific local data
+# ================================
+
+backend/storage/*.json
+backend/storage/*.csv
+backend/storage/*.sqlite3
+
+# Preserve sample telemetry if it is intentionally committed
+!backend/storage/sample_telemetry.json
